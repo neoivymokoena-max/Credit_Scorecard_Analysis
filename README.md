@@ -1,5 +1,5 @@
 # Credit_Scorecard_Analysis
-Built a credit risk scorecard project to predict the probability of default (PD) using German Credit data. It transforms raw borrower data into an interpretable, points based scoring system aligned with banking industry practices.
+End-to-end credit risk scorecard model using WOE, IV, and logistic regression (industry-standard approach used in banking)
 # Credit Risk Scorecard Model (WOE + Logistic Regression)
 
 ## Overview
@@ -56,6 +56,8 @@ To develop a robust, interpretable credit risk model that:
 ### 7. Scorecard Development
 
 * Converted model coefficients into points using PDO scaling
+* Scores were scaled using PDO = 20 and base odds = 50:1, aligning with standard credit risk scoring frameworks.
+* Scores were rescaled to a 300–850 range to align with standard credit scoring frameworks used in banking.
 * Final score = sum of points across variables
 
 ---
@@ -65,6 +67,7 @@ To develop a robust, interpretable credit risk model that:
 * Liquidity indicators (checking/savings) are strongest predictors
 * Longer loan duration significantly increases default risk
 * High loan exposure increases risk at upper levels
+ 
 
 ---
 
@@ -84,9 +87,10 @@ To develop a robust, interpretable credit risk model that:
 
 This scorecard enables:
 
-* Risk-based lending decisions
-* Customer segmentation
-* Improved credit approval strategies
+* Reduce default rates.
+* Segment customers by risk.
+* Improved credit approval strategies.
+* Support risk-based pricing strategies and lending decisions.
 
 ---
 
