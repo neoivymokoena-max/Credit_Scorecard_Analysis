@@ -52,6 +52,10 @@ To develop a robust, interpretable credit risk model that:
 
 * ROC Curve and AUC used to assess performance
 * Model demonstrates strong discriminatory power
+* AUC: 0.786
+* Gini: 0.572
+* KS Statistic: 0.4614  
+The model demonstrates strong discriminatory power and effective separation between good and bad borrowers.
 
 ### 7. Scorecard Development
 
@@ -79,7 +83,8 @@ To develop a robust, interpretable credit risk model that:
 <img width="1000" height="800" alt="scorecard_table" src="https://github.com/user-attachments/assets/cc118d84-5757-48a4-93e0-434aa9b85af4" />
 <img width="800" height="600" alt="score_distribution" src="https://github.com/user-attachments/assets/b43eafc0-c9e7-46b0-926a-e80a697e7f76" />
 <img width="800" height="600" alt="score_bands" src="https://github.com/user-attachments/assets/8983bb48-fc48-47e4-8052-9eb9852f9996" />
-<img width="535" height="379" alt="ROC_Curve" src="https://github.com/user-attachments/assets/83738d88-5c44-4a48-96c6-e346a69b3cc5" />
+<img width="663" height="550" alt="ROC Curve" src="https://github.com/user-attachments/assets/dceb2503-9976-41d5-97d9-bc63d899b969" />
+
 
 ---
 
@@ -99,6 +104,7 @@ This scorecard enables:
 * R (dplyr, pROC)
 * Logistic Regression
 * WOE & IV techniques
+* Gini & KS statistic
 ---
 ## Neo Ivy Mokoena
 Graduate Quantitative Risk Analyst with strong foundation in statistical modelling and financial risk analytics.
