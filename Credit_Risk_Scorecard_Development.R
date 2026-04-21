@@ -351,7 +351,38 @@ barplot(table(df$score_band),
 
 dev.off()
 
+##Adding Gini
+#Step1:Get the probabilities
+probs=predict(model_woe, type = "response")
 
+#Step2:Load proc for AUC and Gini
+library(pROC)
+
+#Step3:Calculate AUC
+(roc_obj=roc(df$credit_risk, probs))
+(auc_value=auc(roc_obj))
+
+#Step4:Calculate gini
+(gini=2*auc_value-1)
+
+##KS Calculation
+library(dplyr)
+
+ks_table=data.frame(
+  actual=df$credit_risk,
+  prob=probs
+)
+
+ks_table=ks_table %>%
+  arrange(desc(prob)) %>%
+  mutate(
+    cum_good=cumsum(actual == 0)/sum(actual == 0),
+    cum_bad=cumsum(actual ==1)/sum(actual == 1),
+    ks=abs(cum_bad - cum_good)
+  )
+
+#Step5:ks value
+(ks_value=max(ks_table$ks))
 
 
 
